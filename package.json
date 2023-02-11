@@ -1,5 +1,5 @@
 {
-    "name": "GPT-midrun-api",
+    "name": "weather-midrun-api",
     "website": "https://mid.run",
     "version": "0.0.1",
     "description": "⚡ Weather API example built with Midrun Node JS - https://mid.run",

@@ -34,7 +34,7 @@ let airports = [];
 // CSV file with airport codes and lat-lon https://ourairports.com/data/
 readCSVFile("./airports.csv").then((data) => {
   airports = data;
-  console.log(airports["SYD"]);
+  // console.log(airports["SYD"]);
 });
 
 getByAirport = async (code, opt) => {

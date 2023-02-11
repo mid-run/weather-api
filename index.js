@@ -24,7 +24,7 @@ const routes = require("./routes");
 var opt = { debug: true, serverCache: true, debugCache: true };
 //app.use("/", midrun.router([routes], opt));
 
-app.use("/", midrun.router([routes], opt));
+app.use("/", midrun.router(routes, opt));
 
 app.listen(port, () => {
   console.log(`⚡ Example Midrun API listening on port ${port}`);
