@@ -1,0 +1,70 @@
+[
+  {
+    "implementationStatus": "Idea",
+    "implementationStatusIndex": 1,
+    "method": "GET",
+    "methodCoul": "hsl(215,70%,90%)",
+    "methodTextCoul": "#000",
+    "nbUrlParameters": 1,
+    "operationId": "joke",
+    "orphan": false,
+    "path": "/jokes/:topic",
+    "potentiallyCachable": true,
+    "projectId": "gptApi",
+    "requiredRole": "public",
+    "urlParameters": [
+      "topic"
+    ]
+  },
+  {
+    "implementationStatus": "Idea",
+    "implementationStatusIndex": 1,
+    "method": "GET",
+    "methodCoul": "hsl(-207,70%,90%)",
+    "methodTextCoul": "#000",
+    "nbUrlParameters": 0,
+    "operationId": "guitarChordProgression",
+    "orphan": false,
+    "path": "/chord-progressions",
+    "potentiallyCachable": true,
+    "projectId": "gptApi",
+    "requiredRole": "public",
+    "urlParameters": []
+  },
+  {
+    "implementationStatus": "Idea",
+    "implementationStatusIndex": 1,
+    "maxAgeClient": 86400000,
+    "maxAgeServer": 1209600000,
+    "method": "GET",
+    "methodCoul": "hsl(-176,70%,90%)",
+    "methodTextCoul": "#000",
+    "nbUrlParameters": 1,
+    "operationId": "advice",
+    "orphan": false,
+    "path": "/advice/:job",
+    "potentiallyCachable": true,
+    "projectId": "gptApi",
+    "requiredRole": "public",
+    "staleAgeClient": 60000,
+    "staleAgeServer": 3600000,
+    "urlParameters": [
+      "job"
+    ]
+  },
+  {
+    "implementationStatus": "Idea",
+    "implementationStatusIndex": 1,
+    "method": "GET",
+    "methodCoul": "hsl(95,70%,90%)",
+    "methodTextCoul": "#000",
+    "nbUrlParameters": 0,
+    "operationId": "home",
+    "orphan": false,
+    "path": "/",
+    "potentiallyCachable": true,
+    "projectId": "gptApi",
+    "requiredRole": "public",
+    "urlParameters": []
+  }
+]

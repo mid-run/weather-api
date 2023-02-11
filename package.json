@@ -1,0 +1,37 @@
+{
+    "name": "GPT-midrun-api",
+    "website": "https://mid.run",
+    "version": "0.0.1",
+    "description": "⚡ GPT (openai) API example built with Midrun Node JS - https://mid.run",
+    "private": "true",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "midrun dev",
+        "deploy": "caprover deploy --default",
+        "u": "npm i midrun-node@latest && npm i -D midrun-cli@latest"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.18.2",
+        "midrun-node": "^0.0.39",
+        "openai": "^3.1.0"
+    },
+    "devDependencies": {
+        "midrun-cli": "^0.0.13"
+    },
+    "nodemonConfig": {
+        "watch": [
+            "**",
+            "src",
+            ".midrun/**",
+            ".env"
+        ],
+        "ignore": [
+            "drafts/**",
+            "test**",
+            "**docs**",
+            "README.md"
+        ],
+        "delay": 1
+    }
+}
