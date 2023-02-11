@@ -21,9 +21,10 @@ app.use(cors());
 const port = process.env.PORT || 3000;
 const routes = require("./routes");
 
-var opt = { debug: true, serverCache: true, debugCache: true };
+//var opt = { debug: true, serverCache: true, debugCache: true };
 //app.use("/", midrun.router([routes], opt));
 
+var opt = {};
 app.use("/", midrun.router(routes, opt));
 
 app.listen(port, () => {
