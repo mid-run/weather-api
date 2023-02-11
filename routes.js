@@ -80,14 +80,9 @@ async function getByGeo(lat, lon, opt) {
   // cleanup the data
   data = _.omit(data, ["generationtime_ms"]);
 
-  if (opt.geo) {
-    // append the country + city name
-    data.geo = opt.geo;
-  }
-  if (opt.airport) {
-    // append airport metadata
-    data.airport = opt.airport;
-  }
+  if (opt.geo) data.geo = opt.geo; // append the country + city name
+  if (opt.airport) data.airport = opt.airport; // append airport metadata
+  if (opt.ip) data.ip = opt.ip;
   return data;
 }
 
@@ -98,12 +93,11 @@ module.exports = {
   geo: async ({ lat, lon, opt }) => {
     return getByGeo(lat, lon, opt);
   },
-  auto: async ({ userIp, opt }) => {
+  auto: async ({ userIp, opt, req }) => {
+    opt.ip = userIp;
     return await getByIp(userIp, opt);
   },
-  auto: async ({ ip, opt }) => {
-    return await getByIp(ip, opt);
-  },
+
   airport: async ({ code, opt }) => {
     code = String(code).toUpperCase();
     return await getByAirport(code, opt);
