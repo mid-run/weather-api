@@ -50,6 +50,7 @@ getByAirport = async (code, opt) => {
 async function getByIp(ip, opt) {
   if (!opt) opt = {};
   const geo = await getGeoByIp(ip);
+  if (!geo) throw new Error("Can't find geo for ip: " + ip);
   opt.geo = geo;
   return getByGeo(geo.ll[0], geo.ll[1], opt);
 }
