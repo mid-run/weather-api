@@ -87,15 +87,22 @@ async function getByGeo(lat, lon, opt) {
 }
 
 module.exports = {
-  home: async () => {
-    return "⚡ Your custom Weather API is working on Midrun ⚡";
+  status: async () => {
+    return {
+      about: "⚡ Weather API example working on Midrun ⚡",
+      status: "up!",
+    };
   },
   geo: async ({ lat, lon, opt }) => {
     return getByGeo(lat, lon, opt);
   },
-  auto: async ({ userIp, opt, req }) => {
+  auto: async ({ userIp, opt }) => {
     opt.ip = userIp;
     return await getByIp(userIp, opt);
+  },
+  ip: async ({ ip, opt }) => {
+    opt.ip = ip;
+    return await getByIp(ip, opt);
   },
 
   airport: async ({ code, opt }) => {
