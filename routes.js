@@ -40,6 +40,7 @@ readCSVFile("./airports.csv").then((data) => {
 getByAirport = async (code, opt) => {
   if (!opt) opt = {};
   const airport = airports[code];
+  if (!airport) throw new Error("Can't find airport: " + code);
   console.log(airport);
   opt.airport = airport;
   return getByGeo(airport.latitude_deg, airport.longitude_deg, opt);

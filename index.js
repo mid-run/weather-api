@@ -1,5 +1,5 @@
 const express = require("express");
-var cors = require("cors");
+//var cors = require("cors");
 
 require("dotenv").config();
 
@@ -17,7 +17,7 @@ if (process.env.DEBUG_NODE_SDK_ON_LOCALHOST != "false" && process.env.DEV) {
 const midrun = require(midrunNodePath);
 
 const app = express();
-app.use(cors());
+//app.use(cors());
 const port = process.env.PORT || 8080;
 const routes = require("./routes");
 
