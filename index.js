@@ -8,6 +8,8 @@ let midrunNodePath;
 if (process.env.DEBUG_NODE_SDK_ON_LOCALHOST != "false" && process.env.DEV) {
   console.log("🛠️🛠️🛠️  Midrun-node - local 🛠️ ");
   midrunNodePath = "../../midrun-node/src/index.js"; //); //static lib for the node SDK.
+  midrunNodePath = "../../midrun-node/dist/index.js"; //); //static lib for the node SDK.
+
   // midrunNodePath = "../../midrun-node"; //); //static lib for the node SDK.
 } else {
   console.log("🛠️🛠️🛠️  Midrun-node - from npm 🛠️ ");

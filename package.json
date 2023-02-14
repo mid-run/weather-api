@@ -17,7 +17,7 @@
         "csv-parser": "^3.0.0",
         "express": "^4.18.2",
         "geoip-lite": "^1.4.7",
-        "midrun-node": "^0.0.46"
+        "midrun-node": "^0.0.47"
     },
     "devDependencies": {
         "midrun-cli": "^0.0.17"
